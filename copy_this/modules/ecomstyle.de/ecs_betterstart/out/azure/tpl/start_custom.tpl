@@ -1,3 +1,11 @@
+[{if $oViewConf->getActiveTheme() == 'mobile'}]
+[{capture append="oxidBlock_content"}]
+    [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
+[{/capture}]
+[{include file="layout/page.tpl" sidebar="Right"}]
+
+[{else}]
+
 [{oxscript include="js/widgets/oxcenterelementonhover.js" priority=10 }]
 [{oxscript add="$( '#specCatBox' ).oxCenterElementOnHover();" }]
 [{capture append="oxidBlock_content"}]
@@ -48,3 +56,4 @@
     [{ insert name="oxid_tracker"}]
 [{/capture}]
 [{include file="layout/page.tpl" sidebar="Right"}]
+[{/if}]
