@@ -11,7 +11,7 @@ Features:
 	
 	- Trusted Shops-Box auch komplett per Mausklick deaktivierbar.
 	
-	- Thrusted-Shops-Box wird in "Partner und Siegel" umbenannt.
+	- Trusted-Shops-Box wird in "Partner und Siegel" umbenannt.
 	
 	- Shoplupe-Box in der Sidebar per Mausklick deaktivierbar.
 
