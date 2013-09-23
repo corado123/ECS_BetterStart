@@ -27,7 +27,8 @@ Installation:
 	
 Shopversion:
 
-	Ab Shopversion 4.7.5. Ältere Shopversionen funktionieren nicht.
+	< 4.7.5: Nur in Verbindung mit dem kostenlosen Modul ECS_ThemeChecker: https://github.com/ecomstyle/ECS_ThemeChecker
+	>= 4.7.5: Ohne Einschränkungen funktionsfähig.
 	
 Licensing: 
 
