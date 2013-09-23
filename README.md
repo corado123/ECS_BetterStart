@@ -27,7 +27,7 @@ Installation:
 	
 Shopversion:
 
-	Getestet mit OXID eShop CE 4.7 und 4.8 beta
+	Ab Shopversion 4.7.5. Ältere Shopversionen funktionieren nicht.
 	
 Licensing: 
 
