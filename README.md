@@ -7,11 +7,9 @@ Features:
 
 	- Welcome-Textbox auf der Startseite aktivierbar. Inhalt ist die CMS-Seite "start.tpl Begrüßungstext".
 	
-	- Trusted-Shops-Werbung in der Sidebar per Mausklick deaktivierbar.
-	
-	- Trusted Shops-Box auch komplett per Mausklick deaktivierbar.
-	
 	- Trusted-Shops-Box wird in "Partner und Siegel" umbenannt.
+	
+	- Trusted Shops-Box in der Sidebar per Mausklick deaktivierbar.
 	
 	- Shoplupe-Box in der Sidebar per Mausklick deaktivierbar.
 
@@ -27,8 +25,8 @@ Installation:
 	
 Shopversion:
 
-	< 4.7.5: Nur in Verbindung mit dem kostenlosen Modul ECS_ThemeChecker: https://github.com/ecomstyle/ECS_ThemeChecker
-	>= 4.7.5: Ohne Einschränkungen funktionsfähig.
+	ab 4.7.5: Ohne Einschränkungen funktionsfähig.
+	4.6.0 - 4.7.4: Funktionsfähig zusammen mit dem kostenlosen Modul ECS_ThemeChecker: https://github.com/ecomstyle/ECS_ThemeChecker
 	
 Licensing: 
 

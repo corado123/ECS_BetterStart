@@ -52,12 +52,10 @@
     'blocks' => array(
         array('template' => 'layout/sidebar.tpl', 'block'=>'sidebar_partners', 'file'=>'sidebar_partners_custom.tpl','position' => '1'),
         array('template' => 'layout/sidebar.tpl', 'block'=>'sidebar_shopluperatings', 'file'=>'sidebar_shopluperatings_custom.tpl'),
-        array('template' => 'widget/sidebar/partners.tpl', 'block'=>'partner_logos', 'file'=>'partner_logos_custom.tpl'),
      ),
     'settings' => array(
         array('group' => 'ecs_main', 'name' => 'ecs_bsstarttpl', 'type' => 'bool',  'value' => '1'),  
         array('group' => 'ecs_main', 'name' => 'ecs_bspartnerbox', 'type' => 'bool',  'value' => '1'),
-        array('group' => 'ecs_main', 'name' => 'ecs_bspartnerts', 'type' => 'bool',  'value' => '1'),
         array('group' => 'ecs_main', 'name' => 'ecs_bsshoplupe', 'type' => 'bool',  'value' => '1'),  
     ),
 );
