@@ -1,4 +1,6 @@
-[{if $oViewConf->getActiveTheme() == 'mobile'}]
+[{assign var="oConf" value=$oViewConf->getConfig()}] 
+
+[{if $oViewConf->getActiveTheme() == $oConf->getConfigParam('sOEThemeSwitcherMobileTheme')}]
 [{capture append="oxidBlock_content"}]
     [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
 [{/capture}]
@@ -23,15 +25,14 @@
         [{/foreach}]
     [{/if}]
 
-[{assign var="oConf" value=$oViewConf->getConfig()}]
 [{if $oConf->getConfigParam('ecs_bsstarttpl')}]
-        [{oxifcontent ident="oxstartwelcome" object="oCont"}]    
+        [{oxifcontent ident="oxstartwelcome" object="oCont"}]
     <div style="background:#f2f2f2;padding:15px;margin-bottom:20px;">
             [{$oCont->oxcontents__oxcontent->value}]
     </div>
-        [{/oxifcontent}]  
+        [{/oxifcontent}]
 [{/if}]
-          
+
     [{if $oView->getBargainArticleList()|@count > 0 || ($promoCatTitle && $promoCatImg)}]
         <div class="promoBoxes clear">
             [{if count($oView->getBargainArticleList()) > 0 }]
@@ -42,7 +43,7 @@
             [{if $promoCatTitle && $promoCatImg}]
                 <div id="specCatBox" class="specCatBox">
                     <h2 class="sectionHead">[{$promoCatTitle}]</h2>
-                    <a href="[{$promoCatLink}]" class="viewAllHover glowShadow corners"><span>[{ oxmultilang ident="PAGE_SHOP_START_VIEW_ALL" }]</span></a>
+                    <a href="[{$promoCatLink}]" class="viewAllHover glowShadow corners"><span>[{ oxmultilang ident="VIEW_ALL_PRODUCTS" }]</span></a>
                     <img src="[{$promoCatImg}]" alt="[{$promoCatTitle}]">
                 </div>
             [{/if}]
@@ -51,9 +52,10 @@
     [{include file="widget/manufacturersslider.tpl" }]
     [{if $oView->getNewestArticles() }]
         [{assign var='rsslinks' value=$oView->getRssLinks() }]
-        [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head="PAGE_SHOP_START_JUSTARRIVED"|oxmultilangassign listId="newItems" products=$oView->getNewestArticles() rsslink=$rsslinks.newestArticles rssId="rssNewestProducts" showMainLink=true}]
+        [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head="JUST_ARRIVED"|oxmultilangassign listId="newItems" products=$oView->getNewestArticles() rsslink=$rsslinks.newestArticles rssId="rssNewestProducts" showMainLink=true}]
     [{/if}]
     [{ insert name="oxid_tracker"}]
 [{/capture}]
 [{include file="layout/page.tpl" sidebar="Right"}]
+
 [{/if}]
