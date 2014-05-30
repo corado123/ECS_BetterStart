@@ -7,33 +7,32 @@ Features:
 
 	- Welcome-Textbox auf der Startseite aktivierbar. Inhalt ist die CMS-Seite "start.tpl Begrüßungstext".
 	
-	- Trusted-Shops-Box wird in "Partner und Siegel" umbenannt.
+	- Trusted-Shops Werbung wird automatisch aus der Partnerbox entfernt.
 	
-	- Trusted Shops-Box in der Sidebar per Mausklick deaktivierbar.
+	- Partnerbox in der Sidebar per Mausklick komplett deaktivierbar.
 	
-	- Shoplupe-Box in der Sidebar per Mausklick deaktivierbar.
+	- Shoplupe-Box in der Sidebar per Mausklick komplett deaktivierbar.
 
 Installation: 
 
-    1. Inhalt von "copy_this" kopieren nach /  (=> Shophauptordner).
+    1. Kopiere den Inhalt von "copy_this" in den Shophauptordner (da, wo auch die Datei config.inc.php enthalten ist).
 	
-	2. tmp und tmp/smarty leeren.
+	2. Leere den /tmp und den /tmp/smarty Ordner.
 	
-	3. Modul aktivieren unter  "Erweiterungen" -> "Module".
+	3. Aktiviere das neue Modul unter Erweiterungen/Module.
 
-	4. Moduleinstellungen vornehmen.
+	4. Wähle in den Moduleinstellungen die gewünschten Optionen.
 	
 Shopversion:
 
-	ab 4.7.5: Ohne Einschränkungen funktionsfähig.
-	4.6.0 - 4.7.4: Funktionsfähig zusammen mit dem kostenlosen Modul ECS_ThemeChecker: https://github.com/ecomstyle/ECS_ThemeChecker
+	Ab 4.8.0, Azure Theme
 	
 Licensing: 
 
 	eComStyle.de
 	Author: Josef Andreas Puckl
 
-	Copyright 2013 eComStyle.de
+	Copyright 2014 eComStyle.de
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
