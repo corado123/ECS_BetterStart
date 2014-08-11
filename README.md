@@ -1,11 +1,11 @@
-eComStyle.de_BetterStart
+eComStyle.de BetterStart
 ==========================
 
-Kostenlose Starthilfe für den OXID eShop!
+Kostenlose Starthilfe fÃ¼r den OXID eShop!
 
 Features:
 
-	- Welcome-Textbox auf der Startseite aktivierbar. Inhalt ist die CMS-Seite "start.tpl Begrüßungstext".
+	- Welcome-Textbox auf der Startseite aktivierbar. Inhalt ist die CMS-Seite "start.tpl BegrÃ¼ÃŸungstext".
 	
 	- Trusted-Shops Werbung wird automatisch aus der Partnerbox entfernt.
 	
@@ -21,7 +21,7 @@ Installation:
 	
 	3. Aktiviere das neue Modul unter Erweiterungen/Module.
 
-	4. Wähle in den Moduleinstellungen die gewünschten Optionen.
+	4. WÃ¤hle in den Moduleinstellungen die gewÃ¼nschten Optionen.
 	
 Shopversion:
 

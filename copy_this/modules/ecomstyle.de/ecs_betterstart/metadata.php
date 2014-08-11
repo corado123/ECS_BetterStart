@@ -23,7 +23,7 @@
                 <br><iframe frameborder="no" width="600px" height="400px" src="https://ssl-account.com/incl.oxidtheme.de/gratis.html"></iframe>',
    
 		'thumbnail'   => 'ecomstyle.png',
-		'version'     => '1.2',
+		'version'     => '1.3',
 		'author'      => '<strong style="font-size: 17px;color:#04B431;">e</strong><strong style="font-size: 16px;">ComStyle.de</strong>',
 		'email'       => 'info@ecomstyle.de',
 		'url'         => 'http://ecomstyle.de',
@@ -38,7 +38,7 @@
         array('template' => 'layout/sidebar.tpl', 'block'=>'sidebar_shopluperatings', 'file'=>'sidebar_shopluperatings_custom.tpl')
      ),
     'settings' => array(
-        array('group' => 'ecs_main', 'name' => 'ecs_bsstarttpl', 'type' => 'bool',  'value' => '1'),  
+        array('group' => 'ecs_main', 'name' => 'ecs_bsstarttpl', 'type' => 'bool',  'value' => '0'),  
         array('group' => 'ecs_main', 'name' => 'ecs_bspartnerbox', 'type' => 'bool',  'value' => '0'),
         array('group' => 'ecs_main', 'name' => 'ecs_bsshoplupe', 'type' => 'bool',  'value' => '1')  
     )

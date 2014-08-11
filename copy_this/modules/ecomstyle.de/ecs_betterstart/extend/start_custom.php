@@ -16,7 +16,38 @@
  *    You should have received a copy of the GNU General Public License
  *    along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
-class start_custom extends start_custom_parent
-{
-   protected $_sThisTemplate = 'start_custom.tpl';
-}
+class start_custom extends start_custom_parent {
+    public function _getStarttpl()
+    {
+        if (oxRegistry::getConfig()->getConfigParam("ecs_bsstarttpl")) {
+            return 'start_custom.tpl';
+        } else {
+            return 'page/shop/start.tpl';
+        } 
+    } 
+
+    public function render()
+    {
+        if (oxConfig::getParameter('showexceptionpage') == '1') {
+            return 'message/exception.tpl';
+        } 
+
+        $myConfig = $this->getConfig();
+
+        $oRss = oxNew('oxrssfeed');
+        if ($myConfig->getConfigParam('iTop5Mode') && $myConfig->getConfigParam('bl_rssTopShop')) {
+            $this->addRssFeed($oRss->getTopInShopTitle(), $oRss->getTopInShopUrl(), 'topArticles');
+        } 
+        if ($myConfig->getConfigParam('iNewestArticlesMode') && $myConfig->getConfigParam('bl_rssNewest')) {
+            $this->addRssFeed($oRss->getNewestArticlesTitle(), $oRss->getNewestArticlesUrl(), 'newestArticles');
+        } 
+        if ($myConfig->getConfigParam('bl_rssBargain')) {
+            $this->addRssFeed($oRss->getBargainTitle(), $oRss->getBargainUrl(), 'bargainArticles');
+        } 
+
+        parent::render();
+
+        return $this->_getStarttpl();
+    } 
+} 
+
