@@ -26,28 +26,14 @@ class start_custom extends start_custom_parent {
         } 
     } 
 
-    public function render()
+    public function render ()
     {
-        if (oxConfig::getParameter('showexceptionpage') == '1') {
-            return 'message/exception.tpl';
+        $ret = parent::render();
+        if ($ret == 'page/shop/start.tpl') {
+            return $this->_getStarttpl();
+        } else {
+            return $ret;
         } 
-
-        $myConfig = $this->getConfig();
-
-        $oRss = oxNew('oxrssfeed');
-        if ($myConfig->getConfigParam('iTop5Mode') && $myConfig->getConfigParam('bl_rssTopShop')) {
-            $this->addRssFeed($oRss->getTopInShopTitle(), $oRss->getTopInShopUrl(), 'topArticles');
-        } 
-        if ($myConfig->getConfigParam('iNewestArticlesMode') && $myConfig->getConfigParam('bl_rssNewest')) {
-            $this->addRssFeed($oRss->getNewestArticlesTitle(), $oRss->getNewestArticlesUrl(), 'newestArticles');
-        } 
-        if ($myConfig->getConfigParam('bl_rssBargain')) {
-            $this->addRssFeed($oRss->getBargainTitle(), $oRss->getBargainUrl(), 'bargainArticles');
-        } 
-
-        parent::render();
-
-        return $this->_getStarttpl();
     } 
 } 
 
