@@ -28,7 +28,7 @@ $aModule = array(
     'email'         => 'info@ecomstyle.de',
     'url'           => 'http://ecomstyle.de',
     'extend'        => array(
-	    'start' => 'ecomstyle.de/ecs_betterstart/contollers/start_custom'
+	    'start' => 'ecomstyle.de/ecs_betterstart/controllers/start_custom'
     ),
     'templates' => array(
         'start_custom.tpl' => 'ecomstyle.de/ecs_betterstart/views/azure/tpl/start_custom.tpl',
