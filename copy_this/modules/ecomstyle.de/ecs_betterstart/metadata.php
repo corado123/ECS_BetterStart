@@ -16,26 +16,26 @@
  *    You should have received a copy of the GNU General Public License
  *    along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
-	$aModule = array(
-		'id'          => 'ecs-betterstart',
-        'title'        => '<strong style="color:#04B431;">e</strong><strong>ComStyle.de</strong>:  <i>BetterStart</i>',
-		'description' => 'Starthilfe f&uuml;r den OXID eShop!
-                <br><iframe frameborder="no" width="600px" height="400px" src="https://ssl-account.com/incl.oxidtheme.de/gratis.html"></iframe>',
-   
-		'thumbnail'   => 'ecomstyle.png',
-		'version'     => '1.3',
-		'author'      => '<strong style="font-size: 17px;color:#04B431;">e</strong><strong style="font-size: 16px;">ComStyle.de</strong>',
-		'email'       => 'info@ecomstyle.de',
-		'url'         => 'http://ecomstyle.de',
-		'extend'      => array( 
-			'start' => 'ecomstyle.de/ecs_betterstart/extend/start_custom'
-		),
+$sMetadataVersion = '1.1';
+$aModule = array(
+    'id'            => 'ecs-betterstart',
+    'title'         => '<strong style="color:#04B431;">e</strong><strong>ComStyle.de</strong>:  <i>BetterStart</i>',
+    'description'   => 'Starthilfe f&uuml;r den OXID eShop!
+                        <br><iframe frameborder="no" width="600px" height="400px" src="https://ssl-account.com/incl.oxidtheme.de/gratis.html"></iframe>',
+    'thumbnail'     => 'ecomstyle.png',
+    'version'       => '1.4',
+    'author'        => '<strong style="font-size: 17px;color:#04B431;">e</strong><strong style="font-size: 16px;">ComStyle.de</strong>',
+    'email'         => 'info@ecomstyle.de',
+    'url'           => 'http://ecomstyle.de',
+    'extend'        => array(
+	    'start' => 'ecomstyle.de/ecs_betterstart/contollers/start_custom'
+    ),
     'templates' => array(
-        'start_custom.tpl' => 'ecomstyle.de/ecs_betterstart/out/azure/tpl/start_custom.tpl',
+        'start_custom.tpl' => 'ecomstyle.de/ecs_betterstart/views/azure/tpl/start_custom.tpl',
     ),
     'blocks' => array(
-        array('template' => 'layout/sidebar.tpl', 'block'=>'sidebar_partners', 'file'=>'sidebar_partners_custom.tpl','position' => '1'),
-        array('template' => 'layout/sidebar.tpl', 'block'=>'sidebar_shopluperatings', 'file'=>'sidebar_shopluperatings_custom.tpl')
+        array('template' => 'layout/sidebar.tpl', 'block'=>'sidebar_partners', 'file'=>'/views/blocks/sidebar_partners_custom.tpl','position' => '1'),
+        array('template' => 'layout/sidebar.tpl', 'block'=>'sidebar_shopluperatings', 'file'=>'/views/blocks/sidebar_shopluperatings_custom.tpl')
      ),
     'settings' => array(
         array('group' => 'ecs_main', 'name' => 'ecs_bsstarttpl', 'type' => 'bool',  'value' => '0'),  

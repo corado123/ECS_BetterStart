@@ -1,4 +1,4 @@
-<?php
+[{*
 /*    Please retain this copyright header in all versions of the software
  *
  *    Copyright (C) 2014  Josef A. Puckl | eComStyle.de
@@ -16,24 +16,13 @@
  *    You should have received a copy of the GNU General Public License
  *    along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
-class start_custom extends start_custom_parent {
-    public function _getStarttpl()
-    {
-        if (oxRegistry::getConfig()->getConfigParam("ecs_bsstarttpl")) {
-            return 'start_custom.tpl';
-        } else {
-            return 'page/shop/start.tpl';
-        } 
-    } 
-
-    public function render ()
-    {
-        $ret = parent::render();
-        if ($ret == 'page/shop/start.tpl') {
-            return $this->_getStarttpl();
-        } else {
-            return $ret;
-        } 
-    } 
-} 
-
+*}]
+[{assign var="oConf" value=$oViewConf->getConfig()}]
+[{if !$oConf->getConfigParam('ecs_bspartnerbox')}]
+    <style type="text/css">
+    <!--
+    #tsMembership{display:none;}
+    -->
+    </style>
+    [{$smarty.block.parent}]
+[{/if}]             
